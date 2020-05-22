@@ -12,19 +12,48 @@
         <img src="img/index-logo.svg" width="163" height="35" alt="Логотип интернет-магазина техники «Девайс»">
       </a>
       <nav>
-        <!-- Здесь будет форма "Поиск по сайту" -->
         <div>
-          <a href="#">Войти</a>
+          <div>
+            <form action="https://echo.htmlacademy.ru" method="get">
+              <input name="search-on-site" placeholder="Поиск по сайту" type="search">
+              <button type="submit">Поиск</button>
+            </form>
+          </div>
+          <div>
+            <div>
+              <a href="#">Войти</a>
+            </div>
+            <div>
+              <a href="#">Сравнить</a>
+              <a href="#">Корзина</a>
+            </div>
+          </div>
         </div>
         <div>
-          <a href="#">Сравнить</a>
-          <a href="#">Корзина</a>
-        </div>
-        <div>
-          <a href="catalog.html">Каталог товаров</a>
-          <a href="#">Доставка</a>
-          <a href="#">Гарантия</a>
-          <a href="#">Контакты</a>
+          <div>
+            <div>
+              <a href="catalog.html">Каталог товаров</a>
+            </div>
+            <div>
+              <ul >
+                <li><a href="#">Виртуальная реальность</a></li>
+                <li><a href="#">Фитнес-браслеты</a></li>
+                <li><a href="#">Квадрокоптер</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Моноподы для селфи</a></li>
+                <li><a href="#">Умные часы</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Экшн-камеры</a></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <a href="#">Доставка</a>
+            <a href="#">Гарантия</a>
+            <a href="#">Контакты</a>
+          </div>
         </div>
       </nav>
     </header>
@@ -36,7 +65,7 @@
             <ul>
               <li>
                 <div>
-                  <img src="img/slider-1 1.png" width="384" height="486" alt="Монопод">
+                  <img src="img/slider-1-1.png" width="384" height="486" alt="Монопод">
                   <h2>Делай селфи, как Бен Стиллер!</h2>
                   <p>Самая длинная палка для селфи доступна в нашем магазине.
                     Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
@@ -59,7 +88,7 @@
               </li>
               <li>
                 <div>
-                  <img src="img/slider-2 1.png" width="345" height="485" alt="Фитнес-Браслет">
+                  <img src="img/slider-2-1.png" width="345" height="485" alt="Фитнес-Браслет">
                   <h2>Худеем правильно!</h2>
                   <p>Мотивирующие фитнес-браслеты помогут найти в себе силы  
                     не пропускать занятия и соблюдать диету.</p>
@@ -74,7 +103,7 @@
               </li>
               <li>
                 <div>
-                  <img src="img/slider-3 1.png" width="526" height="334" alt="Квадрокоптер">
+                  <img src="img/slider-3-1.png" width="526" height="334" alt="Квадрокоптер">
                   <h2>Порхает как бабочка, жалит как пчела!</h2>
                   <p>Этот обычный, на первый взгляд, квадрокоптер оснащен 
                     мощным лазером, замаскированным под стандартную камеру.</p>
@@ -138,8 +167,6 @@
                   подъезду совершенно бесплатно! Ведь мы неплохо 
                   заработаем, поднимая его на ваш этаж.</p>
               </li>
-              <!-- Здесь будут еще 2 пунтка списка -->
-              <!-- Иконка добавлена псевдо элементом -->
             </ul>
           </div>
         </section>
@@ -223,6 +250,32 @@
         </a>
       </div>
     </footer>
+    <section>
+      <h2>Напишите Нам</h2>
+      <button type="button">Закрыть</button>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <div>
+          <label for="user-name">Ваше имя:</label><br>
+          <input id="user-name" type="text" name="name" placeholder="Имя Фамилия">
+        </div>
+        <div>
+          <label for="user-email">Ваш e-mail:</label><br>
+          <input id="user-email" type="email" name="email" placeholder="email@example.com">
+        </div>
+        <div>
+          <label for="user-letter">Текст письма:</label><br>
+          <input id="user-letter" type="text" name="letter" placeholder="В свободной форме">
+        </div>
+        <button type="submit">Отправить</button>
+      </form>
+    </section>
+    <section>
+      <h2>Как до нас добраться</h2>
+      <div>
+        <img src="img/map-big.png" height="593" width="994" alt="Офис компании «Девайс» по адресу г. Москва, ул. Строителей, 15">
+        <button type="button">Закрыть</button>
+      </div>
+    </section>
 
   </body>
 </html>
