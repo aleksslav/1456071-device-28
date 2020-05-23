@@ -65,6 +65,12 @@
         <h2>Фильтр:</h2>
         <form action="https://echo.htmlacademy.ru" method="post">
           <fieldset>
+            <legend>Стоимость</legend>
+            <input type="range" min="0" max="20000" step="1">
+          </fieldset>
+          <span>от 0</span>
+          <span>до 5000</span>
+          <fieldset>
             <legend>Цвет</legend>
             <ul>
               <li>
@@ -106,53 +112,75 @@
         </form>
       </section>
       <section>
-        <h2>Сортировка:</h2>
-        <ul>
-          <li>
-            <div>
-              <img src="img/item-1-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
+        <div>
+          <h2>Сортировка:</h2>
+          <ul>
+            <li><a href="#">По цене</a></li>
+            <li><a href="#">По типу</a></li>
+            <li><a href="#">По популярности</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">По возрастанию</a></li>
+            <li><a href="#">По убыванию</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>
               <div>
-                <button type="submit">в корзину</button>
-                <button type="submit">Добавить к сравнению</button>
+                <img src="img/item-1-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
+                <div>
+                  <button type="submit">в корзину</button>
+                  <button type="submit">Добавить к сравнению</button>
+                </div>
               </div>
-            </div>
-            <h2><a href="#">Любительская селфи-палка</a></h2>
-            <span>500 руб.</span>
-          </li>
-          <li>
-            <div>
-              <img src="img/item-2-1.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
+              <h2><a href="#">Любительская селфи-палка</a></h2>
+              <span>500 руб.</span>
+            </li>
+            <li>
               <div>
-                <button type="submit">в корзину</button>
-                <button type="submit">Добавить к сравнению</button>
+                <img src="img/item-2-1.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
+                <div>
+                  <button type="submit">в корзину</button>
+                  <button type="submit">Добавить к сравнению</button>
+                </div>
               </div>
-            </div>
-            <h2><a href="#">Профессиональная селфи-палка</a></h2>
-            <span>1 500 руб.</span>
-          </li>
-          <li>
-            <div>
-              <img src="img/item-3-1.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
+              <h2><a href="#">Профессиональная селфи-палка</a></h2>
+              <span>1 500 руб.</span>
+            </li>
+            <li>
               <div>
-                <button type="submit">в корзину</button>
-                <button type="submit">Добавить к сравнению</button>
+                <img src="img/item-3-1.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
+                <div>
+                  <button type="submit">в корзину</button>
+                  <button type="submit">Добавить к сравнению</button>
+                </div>
               </div>
-            </div>
-            <h2><a href="#">Непотопляемая селфи-палка</a></h2>
-            <span>2 500 руб.</span>
-          </li>
-          <li>
-            <div>
-              <img src="img/item-4-1.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+              <h2><a href="#">Непотопляемая селфи-палка</a></h2>
+              <span>2 500 руб.</span>
+            </li>
+            <li>
               <div>
-                <button type="submit">в корзину</button>
-                <button type="submit">Добавить к сравнению</button>
+                <img src="img/item-4-1.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+                <div>
+                  <button type="submit">в корзину</button>
+                  <button type="submit">Добавить к сравнению</button>
+                </div>
               </div>
-            </div>
-            <h2><a href="#">Селфи-палка «Следуй за мной»</a></h2>
-            <span>4 900 руб.</span>
-          </li>
-        </ul>
+              <h2><a href="#">Селфи-палка «Следуй за мной»</a></h2>
+              <span>4 900 руб.</span>
+            </li>
+          </ul>
+        </div>
+        <nav>
+          <a href="#">Назад</a>
+          <a href="#">Вперед</a>
+          <ul>
+              <li><a>1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+          </ul>
+        </nav>
       </section>
     </main>
 
