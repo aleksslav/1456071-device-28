@@ -1,0 +1,364 @@
+/* Variables */
+
+:root {
+    --basic-black: #000000;
+    --basic-dark: #363636;
+    --basic-grey: #464646;
+    --basic-half-grey: #7E7E7E;
+    --basic-grey-light: #E5E5E5;
+    --basic-white: #FFFFFF;
+  
+    --special-yellow: #F7E296;
+    --special-yellow-dark: #F0C52E;
+    --special-green: #91C92F;
+
+    --special-pink: #F6DADA;
+} 
+
+ /*fonts
+==================================================*/
+
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy Light"), local("Gilroy-Light"),
+  url("../fonts/gilroylight.woff2") format("woff2"),
+  url("../fonts/gilroylight.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy-bold";
+  src: local("Gilroy ExtraBold"), local("Gilroy-ExtraBold"),
+  url("../fonts/gilroyextrabold.woff2") format("woff2"),
+  url("../fonts/gilroyextrabold.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: local("OpenSans Light"), local("OpenSans-Light"),
+  url("../fonts/opensanslight.woff2") format("woff2"),
+  url("../fonts/opensanslight.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans-regular";
+  src: local("OpenSans Regular"), local("OpenSans-Regular"),
+  url("../fonts/opensans.woff2") format("woff2"),
+  url("../fonts/opensans.woff") format("woff");
+  font-style: normal;
+}   
+
+ /* Global */ 
+
+body {
+    min-width: 1180px;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: 300;
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+  
+li {
+  list-style: none;
+}
+/* знаю что многие свойства поменяются */ 
+  .button{
+    position: relative;
+    border:none;
+    font-family: "Gilroy-bold","Arial", sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: inherit;
+    letter-spacing: 0.1em;
+    color: var(--basic-black);
+    width: 260px;
+    height: 22px;
+}
+
+  .button::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    top: 7px;
+    left: 0;
+    height: 8px;
+    z-index: -1;
+    background-color: var(--special-yellow-dark);
+}
+/*visually-hidden временно */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}  
+/* Main navigation */
+
+.main-nav {
+    background-color: var(--special-yellow);
+}
+
+.main-header-logo { 
+     height: 35px;
+     width: 163px;
+     fill: var(--basic-black);
+}
+
+.main-header-logo:hover {
+  fill-opacity: 0.6;
+}
+
+.main-header-logo:focus {
+  fill-opacity: 0.3;
+}
+
+.search-field{
+    background-color: var(--special-yellow);
+    outline: none;
+    border:none;
+    color:rgba(0,0,0, 0.3);
+    font-family: "Open Sans","Arial", sans-serif;
+    font-size: 15px;
+    line-height: 20px;  
+}  
+
+
+.main-nav a {
+  color: var(--basic-black);
+}
+
+.main-nav a:hover {
+  color: var(--basic-black);
+  opacity: 0.6;
+}
+
+.main-nav a:focus {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.nav-top {
+  font-size: 15px;
+  line-height: 20px;
+  font-family: "Open Sans", "Arial", sans-serif;
+}
+
+.nav-bottom {
+  font-size: 18px;
+  line-height: 22px;
+  font-family: "Gilroy-bold","Arial", sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* About-company */
+
+.about-company h2 {
+  font-size: 47px;
+  line-height: 58px;
+  font-family: "Gilroy-bold","Arial", sans-serif;
+  letter-spacing: 0.2em;
+}
+
+.transport-company a {
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--basic-black);
+  font-family: "Gilroy-bold","Arial", sans-serif;
+}
+
+
+/* Footer */
+
+.main-footer {
+  background-color: var(--basic-dark);
+}
+.footer-account a, 
+.footer-shop a {
+  color: var(--basic-white);
+  opacity: 0.7;
+}
+.footer-right a:hover, 
+.footer-shop a:hover {
+  opacity: 1;
+}
+
+ .footer-right a:focus,
+ .footer-shop a:focus {
+  opacity: 0.3;
+}
+
+.footer-logo {
+  fill: var(--special-yellow-dark);
+  height: 35px;
+  width: 163px;
+}
+
+.footer-logo:hover {
+   fill-opacity: 0.6;
+}
+
+.footer-logo:focus {
+  fill-opacity: 0.3;
+}
+
+ .footer-centre p {
+  font-family: "Open Sans" "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--basic-white)
+}
+
+ .footer-service a {
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-family: "Gilroy-bold","Arial", sans-serif;
+  color: var(--basic-white)
+}
+
+ .footer-service a:hover {
+  opacity: 0.6;
+}
+
+.footer-service a:focus {
+  opacity: 0.3;
+}
+
+.footer-phone {
+  font-family: "Open Sans" "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--basic-white)
+}
+
+
+.social-button {
+	width: 32px;
+  height: 32px;
+  fill: var(--basic-white);
+  fill-opacity: 0.3;
+	background-color: var(--basic-dark);
+}
+
+.social-button:hover {
+  fill-opacity: 0.6;
+}
+
+.social-button:focus {
+	fill-opacity: 0.1;
+}
+
+.html-academy-logo {
+    fill: #FFC600;
+    height: 34px;
+    width: 27px;
+}
+  
+.html-academy-logo:hover {
+     fill-opacity: 0.6;
+}
+  
+.html-academy-logo:focus {
+    fill-opacity: 0.3;
+}
+
+/* Catalog.html */
+
+/* Main */
+
+.page-title {
+  font-family: "Gilroy-bold","Arial", sans-serif;
+  font-size: 47px;
+  line-height: 58px;
+  color: var(--basic-black);
+}
+
+.breadcrumbs-nav li {
+  font-family: "Open Sans" "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.breadcrumbs-nav li:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs-nav li:focus {
+  opacity: 0.1;
+}
+
+.filter-column h2 { 
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--basic-black);
+  font-family: "Gilroy-bold","Arial", sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.color-title, 
+.bluetooth-title { 
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--basic-black);
+  font-family: "Gilroy-bold","Arial", sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.filter-colors label,
+.filter-bluetooth label {
+  font-size: 14px;
+  line-height: 19px;
+  font-family: "Open Sans" "Arial", sans-serif;
+}
+
+.add-compare {
+font-family: "Open Sans" "Arial", sans-serif;
+font-size: 13px;
+line-height: 18px;
+letter-spacing: 0.1em;
+color: var(--basic-black);
+border:none;
+background-color: transparent;
+}
+
+.product-name a {
+font-size: 18px;
+line-height: 22px;
+font-family: "Gilroy-bold","Arial", sans-serif;
+letter-spacing: 0.05em;
+color: var(--basic-black);
+
+}
+.product-price {
+font-family: "Gilroy","Arial", sans-serif;
+font-size: 16px;
+line-height: 18px;
+letter-spacing: 0.05em;
+}
