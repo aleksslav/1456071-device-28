@@ -1,18 +1,17 @@
 /* Variables */
 
 :root {
-    --basic-black: #000000;
-    --basic-dark: #363636;
-    --basic-grey: #464646;
-    --basic-half-grey: #7E7E7E;
-    --basic-grey-light: #E5E5E5;
-    --basic-white: #FFFFFF;
+  --basic-black: #000000;
+  --basic-dark: #363636;
+  --basic-grey: #464646;
+  --basic-half-grey: #7E7E7E;
+  --basic-grey-light: #E5E5E5;
+  --basic-white: #FFFFFF;
   
-    --special-yellow: #F7E296;
-    --special-yellow-dark: #F0C52E;
-    --special-green: #91C92F;
-
-    --special-pink: #F6DADA;
+  --special-yellow: #F7E296;
+  --special-yellow-dark: #F0C52E;
+  --special-green: #91C92F;
+  --special-pink: #F6DADA;
 } 
 
  /*fonts
@@ -24,14 +23,16 @@
   url("../fonts/gilroylight.woff2") format("woff2"),
   url("../fonts/gilroylight.woff") format("woff");
   font-style: normal;
+  font-weight: 300;
 }
 
 @font-face {
-  font-family: "Gilroy-bold";
+  font-family: "Gilroy";
   src: local("Gilroy ExtraBold"), local("Gilroy-ExtraBold"),
   url("../fonts/gilroyextrabold.woff2") format("woff2"),
   url("../fonts/gilroyextrabold.woff") format("woff");
   font-style: normal;
+  font-weight: 800;
 }
 
 @font-face {
@@ -40,88 +41,93 @@
   url("../fonts/opensanslight.woff2") format("woff2"),
   url("../fonts/opensanslight.woff") format("woff");
   font-style: normal;
+  font-weight: 300;
 }
 
 @font-face {
-  font-family: "OpenSans-regular";
+  font-family: "Open Sans";
   src: local("OpenSans Regular"), local("OpenSans-Regular"),
   url("../fonts/opensans.woff2") format("woff2"),
   url("../fonts/opensans.woff") format("woff");
   font-style: normal;
+  font-weight: 400;
 }   
 
  /* Global */ 
 
 body {
-    min-width: 1180px;
-    margin: 0;
-    padding: 0;
-    font-family: "Open Sans", "Arial", sans-serif;
-    font-size: 15px;
-    line-height: 28px;
-    font-weight: 300;
-    color: var(--basic-black);
-    background-color: var(--basic-white);
+  min-width: 1180px;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans","Arial", sans-serif;
+  font-size: 15px;
+  line-height: 28px;
+  font-weight: 300;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
   
-li {
-  list-style: none;
-}
 /* знаю что многие свойства поменяются */ 
-  .button{
-    position: relative;
-    border:none;
-    font-family: "Gilroy-bold","Arial", sans-serif;
-    font-size: 18px;
-    text-decoration: none;
-    text-transform: uppercase;
-    background-color: inherit;
-    letter-spacing: 0.1em;
-    color: var(--basic-black);
-    width: 260px;
-    height: 22px;
+.button {
+  position: relative;
+  border:none;
+  font-family: "Gilroy","Arial", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: inherit;
+  letter-spacing: 0.1em;
+  color: var(--basic-black);
+  width: 260px;
+  height: 22px;
 }
 
-  .button::before{
-    position: absolute;
-    content: "";
-    width: 100%;
-    top: 7px;
-    left: 0;
-    height: 8px;
-    z-index: -1;
-    background-color: var(--special-yellow-dark);
+.button::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  top: 7px;
+  left: 0;
+  height: 8px;
+  z-index: -1;
+  background-color: var(--special-yellow-dark);
 }
+
 /*visually-hidden временно */
+
 .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }  
+
 /* Main navigation */
 
 .main-nav {
-    background-color: var(--special-yellow);
+  background-color: var(--special-yellow);
 }
 
+/* не смог понять возможно ли поменять у SVG файла прозрачность без opacity при помощи RGBA */
+
 .main-header-logo { 
-     height: 35px;
-     width: 163px;
-     fill: var(--basic-black);
+  height: 35px;
+  width: 163px;
+  fill: var(--basic-black);
 }
 
 .main-header-logo:hover {
@@ -132,80 +138,194 @@ li {
   fill-opacity: 0.3;
 }
 
-.search-field{
-    background-color: var(--special-yellow);
-    outline: none;
-    border:none;
-    color:rgba(0,0,0, 0.3);
-    font-family: "Open Sans","Arial", sans-serif;
-    font-size: 15px;
-    line-height: 20px;  
+.search-field {
+  background-color: var(--special-yellow);
+  outline: none;
+  border:none;
+  color:rgba(0,0,0, 0.3);
+  font-family: "Open Sans","Arial", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;  
 }  
-
 
 .main-nav a {
   color: var(--basic-black);
 }
 
 .main-nav a:hover {
-  color: var(--basic-black);
-  opacity: 0.6;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .main-nav a:focus {
-  color: var(--basic-black);
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.main-nav li {
+  list-style: none;
 }
 
 .nav-top {
   font-size: 15px;
   line-height: 20px;
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: "Open Sans","Arial", sans-serif;
+  font-weight: 300;
 }
 
-.nav-bottom {
+.nav-catalog {
   font-size: 18px;
   line-height: 22px;
-  font-family: "Gilroy-bold","Arial", sans-serif;
+  font-family: "Gilroy","Arial", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.catalog-submenu {
+  font-family: "Open Sans","Arial", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;  
+}
+
+.nav-service,
+.nav-contacts {
+  font-size: 18px;
+  line-height: 22px;
+  font-family: "Gilroy","Arial", sans-serif;
+  font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
+/* Main-Index-Slider */
+
+.slider-list {
+  list-style: none;
+}
+
+.slogan {
+  font-size: 47px;
+  line-height: 58px;
+  font-family: "Gilroy","Arial", sans-serif;
+  font-weight: 800;
+}
+
+.slide-description {
+  font-size: 15px;
+  line-height: 20px;
+  font-family: "Open Sans","Arial", sans-serif;
+  font-weight: 300;
+}
+
+.characteristics-list dt {
+  font-size: 36px;
+  line-height: 42px;
+  font-family: "Gilroy","Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+.characteristics-list dd {
+  font-size: 13px;
+  line-height: 15px;
+  font-family: "Gilroy","Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+/* Main-Index-Product-List */
+
+.product-list li {
+  list-style: none;
+}
+
+.product-list a {
+  font-size: 18px;
+  line-height: 22px;
+  font-family: "Gilroy","Arial", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--basic-black);
+}
+
+/* Main-Index-Services-slider */
+
+.services-buttons li {
+  list-style: none;
+}
+
+.services-description li {
+  list-style: none;
+}
+
+.services-description h2 {
+  font-size: 47px;
+  line-height: 58px;
+  font-family: "Gilroy","Arial", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+.services-description p {
+  font-size: 15px;
+  line-height: 28px;
+  font-family: "Open Sans","Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+
+}
+
+/* Main-Index-Partners-Logotypes */
+
+.partners-logotypes li {
+  list-style: none;
+}
 /* About-company */
 
 .about-company h2 {
   font-size: 47px;
   line-height: 58px;
-  font-family: "Gilroy-bold","Arial", sans-serif;
+  font-family: "Gilroy","Arial", sans-serif;
+  font-weight: 800;
   letter-spacing: 0.2em;
 }
 
 .transport-company a {
   font-size: 16px;
   line-height: 28px;
+  font-family: "Gilroy","Arial", sans-serif;
+  font-weight: 800;
   color: var(--basic-black);
-  font-family: "Gilroy-bold","Arial", sans-serif;
 }
 
+.transport-company li {
+  list-style: none;
+}
 
 /* Footer */
 
 .main-footer {
   background-color: var(--basic-dark);
 }
-.footer-account a, 
-.footer-shop a {
-  color: var(--basic-white);
-  opacity: 0.7;
-}
-.footer-right a:hover, 
-.footer-shop a:hover {
-  opacity: 1;
+
+.main-footer li {
+  list-style: none;
 }
 
- .footer-right a:focus,
- .footer-shop a:focus {
-  opacity: 0.3;
+.footer-account a, 
+.footer-shop a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-right a:hover, 
+.footer-shop a:hover {
+  color: var(--basic-white);
+}
+
+.footer-right a:focus,
+.footer-shop a:focus {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .footer-logo {
@@ -215,46 +335,46 @@ li {
 }
 
 .footer-logo:hover {
-   fill-opacity: 0.6;
+  fill-opacity: 0.6;
 }
 
 .footer-logo:focus {
   fill-opacity: 0.3;
 }
 
- .footer-centre p {
-  font-family: "Open Sans" "Arial", sans-serif;
-  font-weight: 300;
+.footer-centre p {
   font-size: 15px;
   line-height: 20px;
-  color: var(--basic-white)
+  font-family: "Open Sans","Arial", sans-serif;
+  font-weight: 300;
+  color: var(--basic-white);
 }
 
- .footer-service a {
+.footer-service a {
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  font-family: "Gilroy-bold","Arial", sans-serif;
-  color: var(--basic-white)
+  font-family: "Gilroy","Arial", sans-serif;
+  font-weight: 800;
+  color: var(--basic-white);
 }
 
- .footer-service a:hover {
-  opacity: 0.6;
+.footer-service a:hover {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-service a:focus {
-  opacity: 0.3;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .footer-phone {
-  font-family: "Open Sans" "Arial", sans-serif;
-  font-weight: 300;
   font-size: 15px;
   line-height: 20px;
-  color: var(--basic-white)
+  font-family: "Open Sans","Arial", sans-serif;
+  font-weight: 300;
+  color: var(--basic-white);
 }
-
 
 .social-button {
 	width: 32px;
@@ -273,61 +393,70 @@ li {
 }
 
 .html-academy-logo {
-    fill: #FFC600;
-    height: 34px;
-    width: 27px;
+  fill: #FFC600;
+  height: 34px;
+  width: 27px;
 }
   
 .html-academy-logo:hover {
-     fill-opacity: 0.6;
+  fill-opacity: 0.6;
 }
   
 .html-academy-logo:focus {
-    fill-opacity: 0.3;
+  fill-opacity: 0.3;
 }
 
-/* Catalog.html */
+/* Main-Catalog.html */
 
-/* Main */
+/* Main-Filter */
 
 .page-title {
-  font-family: "Gilroy-bold","Arial", sans-serif;
   font-size: 47px;
   line-height: 58px;
+  font-family: "Gilroy","Arial", sans-serif;
+  font-weight: 800;
   color: var(--basic-black);
 }
 
+.breadcrumbs-nav a,
 .breadcrumbs-nav li {
-  font-family: "Open Sans" "Arial", sans-serif;
+  font-family: "Open Sans","Arial", sans-serif;
+  font-weight: 300;
   font-size: 14px;
   line-height: 19px;
-  color: var(--basic-black);
-  opacity: 0.3;
+  color:  rgba(0, 0, 0, 0.3);
+  list-style: none;
 }
 
+.breadcrumbs-nav a:hover,
 .breadcrumbs-nav li:hover {
-  opacity: 0.6;
+  color:  rgba(0, 0, 0, 0.6);
 }
 
+.breadcrumbs-nav a:focus,
 .breadcrumbs-nav li:focus {
-  opacity: 0.1;
+  color:  rgba(0, 0, 0, 0.1);
 }
 
 .filter-column h2 { 
   font-size: 16px;
   line-height: 20px;
-  color: var(--basic-black);
-  font-family: "Gilroy-bold","Arial", sans-serif;
+  font-family: "Gilroy","Arial", sans-serif;
+  font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-.color-title, 
-.bluetooth-title { 
+.color-names li, 
+.bluetooth-position li {
+  list-style: none;
+}
+
+.filters-title { 
   font-size: 14px;
   line-height: 17px;
-  color: var(--basic-black);
-  font-family: "Gilroy-bold","Arial", sans-serif;
+  font-family: "Gilroy","Arial", sans-serif;
+  font-weight: 800;
   letter-spacing: 0.1em;
 }
 
@@ -335,30 +464,100 @@ li {
 .filter-bluetooth label {
   font-size: 14px;
   line-height: 19px;
-  font-family: "Open Sans" "Arial", sans-serif;
+  font-family: "Open Sans","Arial", sans-serif;
+  font-weight: 400;
 }
 
 .add-compare {
-font-family: "Open Sans" "Arial", sans-serif;
-font-size: 13px;
-line-height: 18px;
-letter-spacing: 0.1em;
-color: var(--basic-black);
-border:none;
-background-color: transparent;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "Open Sans","Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: var(--basic-black);
+  border: none;
+  background-color: transparent;
+}
+
+/* Main-Product-List */
+
+.category-title {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Gilroy","Arial", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.sort-list li {
+  list-style: none;
+}
+
+.sort-list a {
+  font-size: 14px;
+  line-height: 19px;
+  font-family: "Open Sans","Arial", sans-serif;
+  font-weight: 400;
+  color:  rgba(0, 0, 0, 0.3);
+}
+
+.sort-list a:hover {
+  color:  rgba(0, 0, 0, 0.6);
+}
+
+.sort-list a:focus {
+  color: var(--basic-black);
+}
+
+.product-item {
+  list-style: none;
 }
 
 .product-name a {
-font-size: 18px;
-line-height: 22px;
-font-family: "Gilroy-bold","Arial", sans-serif;
-letter-spacing: 0.05em;
-color: var(--basic-black);
-
+  font-size: 18px;
+  line-height: 22px;
+  font-family: "Gilroy","Arial", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--basic-black);
 }
+
 .product-price {
-font-family: "Gilroy","Arial", sans-serif;
-font-size: 16px;
-line-height: 18px;
-letter-spacing: 0.05em;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: "Gilroy","Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+.page-button-back a,
+.page-button-forward a {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Gilroy","Arial", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.page-numder a,
+.page-numder li {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Gilroy","Arial", sans-serif;
+  font-weight: 800;
+  color:  rgba(0, 0, 0, 0.3);
+  list-style: none;
+}
+
+.page-numder a:hover,
+.page-numder li:hover {
+  color:  rgba(0, 0, 0, 0.6);
+}
+
+.page-numder a:focus,
+.page-numder li:focus {
+  color: var(--basic-black);
 }

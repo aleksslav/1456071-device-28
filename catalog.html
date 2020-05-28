@@ -73,7 +73,7 @@
         <h2>Фильтр:</h2>
         <form action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="filter-cost">
-            <legend>Стоимость</legend>
+            <legend class="filters-title">Стоимость</legend>
             <input type="range" min="0" max="20000" step="1">
             <label for="from">от</label>
             <input type="text" id="from" placeholder="0">
@@ -81,8 +81,8 @@
             <input type="text" id="to" placeholder="5000">
           </fieldset>
           <fieldset class="filter-colors">
-            <legend class="color-title">Цвет</legend>
-            <ul>
+            <legend class="filters-title">Цвет</legend>
+            <ul class="color-names">
               <li>
                 <input type="checkbox" name="color-black" id="filter-black" checked>
                 <label for="filter-black">Чёрный</label>
@@ -106,8 +106,8 @@
             </ul>
           </fieldset>
           <fieldset class="filter-bluetooth">
-            <legend class="bluetooth-title">Bluetooth</legend>
-            <ul>
+            <legend class="filters-title">Bluetooth</legend>
+            <ul class="bluetooth-position">
               <li>
                 <input type="radio" name="bluetooth-on/off" value="installed" id="bluetooth-installed" checked>
                 <label for="bluetooth-installed">Есть</label>
@@ -123,13 +123,13 @@
       </section>
       <section class="product-column">
         <div class="category-sort">
-          <h2>Сортировка:</h2>
-          <ul>
+          <h2 class="category-title">Сортировка:</h2>
+          <ul class="sort-list">
             <li><a href="#">По цене</a></li>
             <li><a href="#">По типу</a></li>
             <li><a href="#">По популярности</a></li>
           </ul>
-          <ul>
+          <ul class="sort-list-buttons visually-hidden">
             <li><a href="#">По возрастанию</a></li>
             <li><a href="#">По убыванию</a></li>
           </ul>
@@ -183,9 +183,13 @@
           </ul>
         </div>
         <nav>
-          <a href="#">Назад</a>
-          <a href="#">Вперед</a>
-          <ul>
+          <div class="page-button-back">
+            <a href="#">Назад</a>
+          </div>
+          <div class="page-button-forward">
+            <a href="#">Вперед</a>
+          </div>
+          <ul class="page-numder">
               <li><a>1</a></li>
               <li><a href="#">2</a></li>
               <li><a href="#">3</a></li>
