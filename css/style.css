@@ -249,6 +249,10 @@ img {
   color: var(--basic-black);
 }
 
+.product-list a:focus {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 /* Main-Index-Services-slider */
 
 .services-buttons li {
@@ -438,6 +442,10 @@ img {
   color:  rgba(0, 0, 0, 0.1);
 }
 
+.filter-column {
+  background-color: var(--basic-grey-light);
+}
+
 .filter-column h2 { 
   font-size: 16px;
   line-height: 20px;
@@ -445,6 +453,23 @@ img {
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  background-color: #DCDCDC;
+}
+
+.filter-cost label,
+.filter-cost input {
+  font-size: 14px;
+  line-height: 16px;
+  font-family: "Gilroy","Arial", sans-serif;
+  font-weight: 300;
+     
+}
+
+.filter-cost input {
+  outline: none;
+  border: none;
+  background-color: var(--basic-grey-light);
+
 }
 
 .color-names li, 
@@ -474,9 +499,17 @@ img {
   font-family: "Open Sans","Arial", sans-serif;
   font-weight: 300;
   letter-spacing: 0.1em;
-  color: var(--basic-black);
+  color:  rgba(0, 0, 0, 0.5);
   border: none;
   background-color: transparent;
+}
+
+.add-compare:hover {
+  color: var(--basic-black);
+}
+
+.add-compare:focus {
+  color:  rgba(0, 0, 0, 0.2);
 }
 
 /* Main-Product-List */
@@ -540,6 +573,18 @@ img {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--basic-black);
+  background-color: #EBEBEB;
+}
+
+.page-button-back a:hover,
+.page-button-forward a:hover {
+  background-color: #D9D9D9;
+}
+
+.page-button-back a:focus,
+.page-button-forward a:focus {
+  background-color: #D9D9D9;
+  color:  rgba(0, 0, 0, 0.3);
 }
 
 .page-numder a,
