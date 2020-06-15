@@ -104,29 +104,23 @@ img {
   
 /* Button */ 
 
-/* в фаерфоксе полоса по центру кнопки на 1 пиксель больше чем рамка не понимаю как исправить */ 
-
-
 .button {
-  box-sizing: border-box;
   position: relative;
-  display: inline-block;
-  vertical-align: top;
   z-index: 2;
-  padding: 12px 40px;
+  padding: 9px 40px;
   text-transform: uppercase;
   font-weight: 800;
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 22px;
   letter-spacing: 0.2em;
-  color: #000;
-  background-color: transparent;
+  color: var(--basic-black);
   outline: none;
   border: none;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
+  background-color: transparent;
 }
 
 .button::after {
@@ -134,10 +128,9 @@ img {
   position: absolute;
   width: 100%;
   z-index: -1;
-  border-bottom: 8px solid #f0c52e;
-  top: 50%;
-  left:0;
-  transform: translateY(-50%);
+  border-bottom: 8px solid var(--special-yellow-dark);
+  top: 16px;
+  left:0;  
 }
 
 .button:hover {
@@ -152,8 +145,6 @@ img {
   color: rgba(0, 0, 0, 0.3);
   background-color: var(--special-yellow-dark);
 }
-
-
 
 /*visually-hidden*/
 
@@ -175,17 +166,23 @@ input[type="radio"].visually-hidden {
 
 /* Main navigation */
 
+.site-wrapper {
+  margin-bottom: 93px;
+}
+
 .main-header-logo {
   display: block;
-  position: relative;
-  top: 13px;
-  left: 60px;
   margin: 0;
+  margin-left: 60px;
+  margin-top: 20px;
   padding: 0;
   height: 35px;
   width: 163px;
   fill: var(--basic-black);
-  z-index: 1;
+}
+
+.main-header-logo-wrapper {
+  background-image: linear-gradient(to top, #F7E296 50%,#ffffff 50%);
 }
 
 .main-header-logo:hover {
@@ -205,7 +202,7 @@ input[type="radio"].visually-hidden {
 
   margin: 0;
   padding: 0;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
   
   font-size: 15px;
   line-height: 20px;
@@ -265,8 +262,6 @@ input[type="radio"].visually-hidden {
   z-index: 1;
 }
 
-/* не отображается 1 пиксель рамки. не знаю как исправить. */
-
 .search-button {
   height: 48px;
   width: 82px;
@@ -293,7 +288,7 @@ input[type="radio"].visually-hidden {
  }
 
 .main-nav {
-  padding-top: 28px;
+  padding-top: 8px;
   padding-right: 60px;
   padding-bottom: 144px;
   padding-left: 60px;
@@ -318,16 +313,15 @@ input[type="radio"].visually-hidden {
 }
 
 .main-nav-item {  
- padding-top: 10px;
- padding-bottom: 10px;
- padding-left: 27px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 27px;
 }
 
 .nav-login {
   position: relative;
   width: 280px;
 }
-
 
 .nav-login::before {
   content: "";
@@ -493,11 +487,11 @@ input[type="radio"].visually-hidden {
 
 .catalog-submenu-list a {
   align-self: flex-start;
-  padding-bottom: 22px;
+  margin-bottom: 22px;
 }
 
 .catalog-submenu-list a:last-child {
-  padding-bottom: 0;
+  margin-bottom: 0px;
 }
 
 .catalog-submenu li {
@@ -548,7 +542,6 @@ input[type="radio"].visually-hidden {
   position: relative;
   display: flex;
   margin-top: -110px;
-  padding-bottom: 93px;
 }
 
 .slider-list {
@@ -577,23 +570,41 @@ input[type="radio"].visually-hidden {
   flex-direction: column;
   align-items: flex-start;
   width: 560px;
-  padding-top: 75px;
+  margin-top: 75px;
 }
 
 .characteristics-list {
   display: flex;
   flex-direction: row;
+  margin-top: 30px;
 }
 
 .characteristics-item {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding-right: 25px;
+  margin-right: 25px;
+}
+
+.characteristics-list dt {
+  margin-bottom: 15px;
+  font-size: 36px;
+  line-height: 42px;
+  font-family: "Gilroy","Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+.characteristics-list dd {
+  margin: 0;
+  font-size: 13px;
+  line-height: 15px;
+  font-family: "Gilroy","Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.1em;
 }
 
 .characteristics-item dt, .characteristics-item dd {
-  margin: 0;
   align-self: start;
 }
 
@@ -662,47 +673,30 @@ input[type="radio"].visually-hidden {
 .slide-description {
   margin: 0;
   padding: 0;
-  padding-top: 30px;
-  padding-bottom: 60px;
+  margin-top: 30px;
+  margin-bottom: 60px;
   font-size: 15px;
   line-height: 20px;
   font-family: "Open Sans","Arial", sans-serif;
   font-weight: 300;
 }
 
-.characteristics-list {
-  padding-top: 30px;
-}
-
-.characteristics-list dt {
-  padding-bottom: 15px;
-  font-size: 36px;
-  line-height: 42px;
-  font-family: "Gilroy","Arial", sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.1em;
-}
-
-.characteristics-list dd {
-  font-size: 13px;
-  line-height: 15px;
-  font-family: "Gilroy","Arial", sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.1em;
+.slide-controls-wrapper {
+  position: relative;
 }
 
 .slider-controls {
+  position: absolute;
   margin: 0;
   padding: 0;
-  bottom: 230px;
+  bottom: 5px;
+  right: -260px;
   list-style: none;
-  right: 90px;
   z-index: 1;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  position: absolute;  
 }
 
 .slider-control-button {
@@ -731,174 +725,174 @@ input[type="radio"].visually-hidden {
 /* Main-Index-Product-List */
 
 .popular-product {
-  padding-bottom: 165px;
+  margin-bottom: 49px;
 }
 
 .product-list {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 } 
 
-.product-list li {
+/* не понимаю как следать что бы при focuse прозрачность фона не менялся. */
+
+.product-item  {
+  position: relative;
   list-style: none;
-}
-
-.product-item h3 {
   margin: 0;
-  padding: 0;
-  
+  padding: 0;  
 }
 
-.product-list a {
+.product-link {
+  margin: 0;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding: 0;
+  height: auto;
+  width: 160px;
+  display: block;
+       
   font-size: 18px;
   line-height: 22px;
   font-family: "Gilroy","Arial", sans-serif;
   font-weight: 800;
-  letter-spacing: 0.05em;
-  margin: 0;
-  padding: 0;
+  letter-spacing: 0.05em; 
   color: var(--basic-black);
 }
 
-.product-list a:focus {
-  color: rgba(0, 0, 0, 0.3);
+.product-item:hover::before  {
+  color: var(--special-yellow-dark);
 }
 
-.product-item {
-  position: relative;
-  width: 160px;
-  display: block;
-  padding-bottom: 20px;
-}
-
-.product-item:hover::before {
+.product-link:hover::before {
   background-color: var(--special-yellow-dark);
 }
 
-.product-item:focus::before {
-  background-color: rgba(0, 0, 0, 0.3);
- 
+.product-link-1:focus img {
+  opacity: 0.3;
+  z-index: -1;
 }
 
-.product-item-4 a {
+.product-link:focus {
+  opacity: 0.3;
+}
+
+.product-link-4 {
   letter-spacing: normal;
 }
 
-/* наверное нужно добавлять изображения в html потому что я не знаю как следать чтобы область с псевдо элементом была кликабеьна.  */
-
-.product-item-1::before {
+.product-item::before{
   content: "";
+  display: block;
   position: relative;
-  display: inline-block;
-  bottom: 0;
-  right: 0;
+  top: 0;
+  left: 0;
+  width: 160px;
+  height: 160px;
+  background-position: center;
+  background-color: var(--special-yellow);
+  z-index: -1;
+}
+
+.product-link-1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 160px;
   height: 160px;
   background-image: url("../img/popular-1.svg");
   background-repeat: no-repeat;
   background-position: center;
-  
-  background-color: var(--special-yellow);
-  z-index: -1;
+  z-index: 0;
 }
 
-.product-item-2::before {
+.product-link-2::before {
   content: "";
-  position: relative;
-  display: inline-block;
-  bottom: 0;
-  right: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 160px;
   height: 160px;
   background-image: url("../img/popular-2.svg");
   background-repeat: no-repeat;
   background-position: center;  
-  background-color: var(--special-yellow);
-  z-index: -1;
+  z-index: 0;
 }
 
-.product-item-3::before {
+.product-link-3::before {
   content: "";
-  position: relative;
-  display: inline-block;
-  bottom: 0;
-  right: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 160px;
   height: 160px;
   background-image: url("../img/popular-3.svg");
   background-repeat: no-repeat;
   background-position: center;  
-  background-color: var(--special-yellow);
-  z-index: -1;
+  z-index: 0;
 }
 
-.product-item-4::before {
+.product-link-4::before {
   content: "";
-  position: relative;
-  display: inline-block;
-  bottom: 0;
-  right: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 160px;
   height: 160px;
   background-image: url("../img/popular-4.svg");
   background-repeat: no-repeat;
   background-position: center;  
-  background-color: var(--special-yellow);
-  z-index: -1;
+  z-index: 0;
 }
 
-.product-item-5::before {
+.product-link-5::before {
   content: "";
-  position: relative;
-  display: inline-block;
-  bottom: 0;
-  right: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 160px;
   height: 160px;
   background-image: url("../img/popular-5.svg");
   background-repeat: no-repeat;
   background-position: center;  
-  background-color: var(--special-yellow);
-  z-index: -1;
+  z-index: 0;
 }
 
-.product-item-6::before {
+.product-link-6::before {
   content: "";
-  position: relative;
-  display: inline-block;
-  bottom: 0;
-  right: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 160px;
   height: 160px;
   background-image: url("../img/popular-6.svg");
   background-repeat: no-repeat;
   background-position: center;  
-  background-color: var(--special-yellow);
-  z-index: -1;
+  z-index: 0;
 }
 
 /* Main-Index-Services-slider */
 
 .bottom-slider { 
-  height: 288px;
-  background-color: var(--basic-grey-light);
-  position: relative;
+  padding-top: 62px;
+  padding-bottom: 134px;
+  background-image: linear-gradient(to top, #E5E5E5 0px, #E5E5E5 288px, #ffffff 288px, #ffffff 403px);
 }
 
 .slider-wrapper {
-  position: relative;
-  top: -24px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-between;  
 }
 
 .slider-left { 
   display: flex;
-  width: 277px;
+  max-width: 277px;
+  margin-top: 32px;
 }
 
 .services-buttons {
@@ -907,8 +901,6 @@ input[type="radio"].visually-hidden {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-content: space-between;
 }
 
 .slider-right {
@@ -916,11 +908,57 @@ input[type="radio"].visually-hidden {
 }
 
 .services-buttons li {
-  padding-bottom: 30px;
+  margin-bottom: 22px;
+}
+
+.services-buttons li:last-child {
+  margin-bottom: 0;
+}
+
+/* не понимаю как сделать чтобы кнопка была сразу кативной. может нужно переделать на input type="radio" со значением checked */
+
+.bottom-slider-button {
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  padding: 9px 25px;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  color: var(--basic-black);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.bottom-slider-button:hover {
+  background-color: var(--special-yellow-dark);
+}
+
+.bottom-slider-button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  border-bottom: 8px solid var(--special-yellow-dark);
+  top: 16px;
+  left:0;
 }
 
 .bottom-slider-button:focus::after {
-  border-bottom: 8px solid #000;
+  text-align: left;
+  width: 277px;
+  outline: none;
+  border: none;
+  color: var(--special-yellow);
+  background-color: var(--basic-black);
 }
 
 .bottom-slider-button:focus,
@@ -945,10 +983,11 @@ input[type="radio"].visually-hidden {
   position: relative;
   margin: 0;
   padding: 0;
-  padding-bottom: 40px;
+  margin-top: 23px;
+  margin-bottom: 40px;
 
   font-size: 47px;
-  line-height: 47px;
+  line-height: 58px;
   font-family: "Gilroy","Arial", sans-serif;
   font-weight: 800;
   letter-spacing: 0.2em;
@@ -958,7 +997,7 @@ input[type="radio"].visually-hidden {
   content: "";
   position: absolute;
   display: inline-block;
-  top: -76px;
+  top: -73px;
   left: -123px;
   width: 7px;
   height: 320px;    
@@ -970,7 +1009,7 @@ input[type="radio"].visually-hidden {
   content: "";
   position: absolute;
   display: inline-block;
-  bottom: -72px;
+  bottom: -104px;
   right: 0;
   width: 136px;
   height: 164px;
@@ -985,7 +1024,7 @@ input[type="radio"].visually-hidden {
   content: "";
   position: absolute;
   display: inline-block;
-  bottom: -84px;
+  bottom: -118px;
   right: 0;
   width: 171px;
   height: 195px;
@@ -996,12 +1035,11 @@ input[type="radio"].visually-hidden {
   z-index: 1;
 }
 
-
 .slogan-bottom-3::after {
   content: "";
   position: absolute;
   display: inline-block;
-  bottom: -72px;
+  bottom: -103px;
   right: 0;
   width: 156px;
   height: 188px;
@@ -1031,8 +1069,8 @@ input[type="radio"].visually-hidden {
 /* Main-Index-Partners-Logotypes */
 
 .partners {
-  padding-top: 90px;
-  padding-bottom: 90px;
+  margin-top: 90px;
+  margin-bottom: 90px;
 }
 
 .partners-logotypes {
@@ -1066,7 +1104,7 @@ input[type="radio"].visually-hidden {
 /* About-company */
 
 .about-company {
-  padding-bottom: 75px;
+  margin-bottom: 75px;
 }
 
 .about-company-wrapper {
@@ -1086,10 +1124,10 @@ input[type="radio"].visually-hidden {
   position: relative;
   margin: 0;
   padding: 0;
-  padding-top: 57px;
-  padding-bottom: 50px;
+  margin-top: 57px;
+  margin-bottom: 50px;
   font-size: 47px;
-  line-height: 58px;
+  line-height: 48px;
   font-family: "Gilroy","Arial", sans-serif;
   font-weight: 800;
   letter-spacing: 0.2em;
@@ -1098,7 +1136,7 @@ input[type="radio"].visually-hidden {
 .about-us-title::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -57px;
   left: 0;
   width: 80px;
   height: 7px;
@@ -1108,30 +1146,37 @@ input[type="radio"].visually-hidden {
 .about-company-description {
   margin: 0;
   padding: 0;
-  padding-bottom: 40px;
+  margin-bottom: 40px;
   font-size: 15px;
   line-height: 28px;
   font-family: "Open Sans","Arial", sans-serif;
   font-weight: 300; 
 }
 
+.about-us p:nth-last-of-type(1) {
+  margin-bottom: 60px;
+}
+
 .transport-company {
   margin: 0;
   padding: 0;
-  padding-top: 20px;
-  padding-bottom: 54px;
+  margin-bottom: 84px;
+}
+
+.transport-company-list:last-child {
+  margin-bottom: 0;
 }
 
 .transport-company-list {
   margin: 0;
   padding: 0;
-  padding-bottom: 20px;
-  padding-left: 24px;
+  margin-bottom: 20px;
+  margin-left: 24px;
   position: relative;
 
   list-style: none;
   font-size: 16px;
-  line-height: 28px;
+  line-height: 22px;
   font-family: "Gilroy","Arial", sans-serif;
   font-weight: 800;
 }
@@ -1141,20 +1186,20 @@ input[type="radio"].visually-hidden {
 }
 
 .transport-company-list::before {
-content: "";
-position: absolute;
-top: 12px;
-left: 0;
-width: 8px;
-height: 8px;
-border: 2px solid #E5E5E5;
-border-radius: 50%;
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -24px;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #E5E5E5;
+  border-radius: 50%;
 }
 
 .contacts-map {
   margin: 0;
   padding: 0;
-  padding-bottom: 84px;
+  margin-bottom: 79px;  
 }
 
 .contacts-map-img {
@@ -1179,8 +1224,8 @@ border-radius: 50%;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  padding-top: 64px;
-  padding-bottom: 40px;
+  margin-top: 46px;
+  margin-bottom: 39px;
 }
 
 .footer-nav {
@@ -1220,6 +1265,7 @@ border-radius: 50%;
   fill: var(--special-yellow-dark);
   height: 35px;
   width: 163px;
+  margin-top: 18px;
 }
 
 .footer-logo:hover {
@@ -1301,7 +1347,7 @@ border-radius: 50%;
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
-  padding-bottom: 70px;
+  margin-bottom: 70px;
 }
 
 .footer-address {
@@ -1357,7 +1403,7 @@ border-radius: 50%;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  padding-bottom: 65px;
+  margin-bottom: 56px;
 }
 
 .footer-bottom-wrapper {
@@ -1421,6 +1467,14 @@ border-radius: 50%;
 
 /* Catalog-header */
 
+.main-nav-catalog {
+  padding-bottom: 45px;
+}
+
+.site-wrapper-catalog {
+  margin-bottom: 44px;
+}
+
 .nav-logout-link {
   padding-left: 20px;
   opacity: 0.3;
@@ -1431,8 +1485,8 @@ border-radius: 50%;
 .breadcrumbs-nav {
   margin: 0;
   padding: 0;
-  padding-left: 60px;
-  padding-bottom: 50px;
+  margin-left: 60px;
+  margin-bottom: 50px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -1441,9 +1495,8 @@ border-radius: 50%;
 .page-title {
   margin: 0;
   padding: 0;
-  padding-top: 44px;
-  padding-bottom: 30px;
-  padding-left: 60px;
+  margin-bottom: 30px;
+  margin-left: 60px;
 
   font-size: 47px;
   line-height: 58px;
@@ -1493,12 +1546,13 @@ border-radius: 50%;
 
 .column-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   width: 1200px;
   margin: 0 auto;
   padding-right: 20px;
   padding-left: 20px;
 }
+
 /* Main-Filter-column */
 
 .filter-column {
@@ -1552,8 +1606,7 @@ border-radius: 50%;
 
 .filter-column-wrapper {
   width: 270px;
-  padding-top: 70px;
-  padding-right: 70px;
+  margin-top: 70px;
 }
 
 .filter-cost,
@@ -1568,8 +1621,8 @@ border-radius: 50%;
   position: relative;
   margin: 0;
   padding: 0;
-  padding-top: 14px;
-  padding-bottom: 30px;
+  margin-top: 14px;
+  margin-bottom: 30px;
   font-size: 14px;
   line-height: 17px;
   font-family: "Gilroy","Arial", sans-serif;
@@ -1580,7 +1633,7 @@ border-radius: 50%;
 .filters-title::before {
   content: "";
   position: absolute;
-  top: 0px;
+  top: -14px;
   left: 0px;
   width: 200px;
   height: 2px;
@@ -1631,8 +1684,8 @@ border-radius: 50%;
 }
 
 .price-controls {
-  padding-top: 8px;
-  padding-bottom: 38px;
+  margin-top: 8px;
+  margin-bottom: 38px;
   display: flex;
   justify-content: space-between;
 }
@@ -1664,13 +1717,13 @@ border-radius: 50%;
 .color-names {
   margin: 0;
   padding: 0;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .filter-option {
   list-style: none;
-  padding-left: 40px;
-  padding-bottom: 20px;
+  margin-left: 40px;
+  margin-bottom: 20px;
 }
 
 .filter-option label {
@@ -1705,7 +1758,7 @@ border-radius: 50%;
   left: -35px;
   width: 14px;
   height: 11px;
-  background-image: url("../img/Vector-img.svg");
+  background-image: url("../img/checked-icon.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -1715,7 +1768,7 @@ border-radius: 50%;
 .bluetooth-position {
   margin: 0;
   padding: 0;
-  padding-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .filter-input-radio + label::before {
@@ -1741,6 +1794,11 @@ border-radius: 50%;
 }
 
 /* Main-Product-List */
+.product-page {
+  padding-top: 50px;
+  padding-left: 70px;
+  padding-bottom: 78px;
+}
 
 .category-sort {
   position: relative;
@@ -1753,10 +1811,12 @@ border-radius: 50%;
   padding-left: 70px;
 }
 
+/* из-за этого псевдо элемента появляется полоса прокрутку я ее уберу в javascript  */
+
 .category-sort::before {
   content: "";
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   z-index: -1;
   width: 100vw;
@@ -1805,6 +1865,12 @@ border-radius: 50%;
   color: var(--basic-black);
 }
 
+.sort-link-active,
+.sort-link:active {
+ color:#000;
+ opacity:1
+}
+
 .sort-list-buttons {
   width: 60px;
   list-style: none;
@@ -1844,13 +1910,37 @@ border-radius: 50%;
   background-position: 0 0;
 }
 
+.arrow-up-link,
+.arrow-down-link {
+  opacity: 0.2;
+}
+
+.arrow-link-active,
+.arrow-link:active {
+  color: var(--basic-black);
+  opacity: 1;
+}
+
+.arrow-down-link:focus::before,
+.arrow-down-link:hover,
+.arrow-up-link:focus::before,
+.arrow-up-link:hover {
+  opacity: 0.4;
+}
+
+.arrow-down-link:active,
+.arrow-down-link:active::before,
+.arrow-up-link:active,
+.arrow-up-link:active::before {
+  opacity: 1;
+}
+
 /* Main-Product-List */
 
 .product-card-list {
   margin: 0;
+  margin-bottom: 40px;
   padding: 0;
-  padding-left: 70px;
-  padding-top: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr;  
   grid-column-gap: 40px;
@@ -1889,18 +1979,18 @@ border-radius: 50%;
   position: relative;
 }
 
-.product-image:hover {
+.product-image:hover img {
   opacity: 0.7;
 }
 
- .product-image:hover .product-buttons {
+.product-image:hover .product-buttons {
   display: block;
- }
+}
 
- .product-buttons:hover {
+.product-buttons:hover {
   opacity: 1;
   z-index: 2;
- }
+}
  
 .add-compare {
   font-size: 13px;
@@ -1949,9 +2039,6 @@ border-radius: 50%;
 .pagination {
   margin: 0;
   padding: 0;
-  margin-top: 40px;
-  margin-left: 70px;
-  margin-bottom: 78px;
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -1967,7 +2054,6 @@ border-radius: 50%;
   padding-left: 30px;
   padding-right: 30px;
 }
-
 
 .pagination-button {
   font-size: 16px;
@@ -2021,6 +2107,12 @@ border-radius: 50%;
   color: var(--basic-black);
 }
 
+.pagination-item a:active,
+.pagination-item-active a,
+.pagination-item-active a:hover {
+  color: var(--basic-black);
+}
+
 /* Catalog-footer */
 
 .footer-nav-item-user-link {
@@ -2040,8 +2132,7 @@ border-radius: 50%;
   content: "";
   position: absolute;
   top: 4px;
-  left: 9px;
-   
+  left: 9px;   
   width: 14px;
   height: 14px;
   background-image: url("../img/icon-user-footer.svg");
@@ -2057,5 +2148,171 @@ border-radius: 50%;
 .footer-user-link:focus::before,
 .footer-user-link:active::before {
   opacity: 0.3;
+}
+
+/* modal-write-us */
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  color: var(--basic-black);
+  background-color: var(--basic-white); 
+  background-position: 0 0;
+  background-repeat: repeat;
+  box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
+}
+
+.modal-write-us {
+  height: 560px;
+  width: 960px;
+  padding-top: 92px;
+  padding-right: 100px;
+  padding-bottom: 69px;
+  padding-left: 100px;
+  z-index: 10;
+  display: none;
+}
+
+.modal-close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 55px;
+  height: 55px;
+  background-color: var(--special-yellow-dark);
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.modal-close:hover {
+  background-color: var(--special-yellow-dark);
+  opacity: 1;
+}
+
+.modal-close:focus {
+  background-color: var(--special-yellow-dark);
+  opacity: 0.7;
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  width: 20px;
+  height: 2px;
+  background-color: var(--basic-white);
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+/* Modal-form */
+
+.modal-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.modal-input-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-input-wrap label {
+  margin-bottom: 10px;
+
+  font-size: 18px;
+  line-height: 22px;
+  font-family: "Gilroy","Arial", sans-serif;
+  font-weight: 800;
+  color: var(--basic-black);
+}
+
+.modal-input-wrap input {
+  width: 360px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  padding-left: 20px;
+  margin-bottom: 32px;
+  font-size: 14px;
+  line-height: 14px;
+  font-family: "Gilroy","Arial", sans-serif;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.4);
+  border: 0;
+  outline: 0;
+  background-color: #F2F2F2;
+}
+
+.modal-input-wrap textarea {
+  width: 760px;
+  margin-bottom: 54px;
+  min-height: 167px;
+  padding-top: 17px;
+  padding-left: 20px;
+  resize: none;
+
+  font-size: 14px;
+  line-height: 14px;
+  font-family: "Gilroy","Arial", sans-serif;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.4);
+  border: 0;
+  outline: 0;
+  background-color: #F2F2F2;
+}
+
+.modal-input-wrap input:hover,
+.modal-input-wrap textarea:hover {
+  background-color: var(--basic-grey-light);
+}
+
+.modal-input-wrap input:focus,
+.modal-input-wrap textarea:focus{
+  background-color: var(--basic-white);
+  color:#363636;
+  border: 2px solid #F7E296;
+  outline: 0;
+}
+
+.modal-input-wrap input:invalid,
+.modal-input-wrap textarea:invalid{
+  background-color:#F6DADA;
+  color: rgba(0, 0, 0, 0.4);
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+}
+
+/* Modal map */
+
+.modal-map {
+  display: none;
+  z-index: 10;
+  width: 960px;
+  height: 560px;
+}
+
+.modal-map img {
+  display: block;
+}
+
+.modal-map iframe {
+  border: none;
 }
 
