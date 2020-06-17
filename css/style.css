@@ -163,7 +163,6 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
-
 /* Main navigation */
 
 .site-wrapper {
@@ -501,18 +500,18 @@ input[type="radio"].visually-hidden {
 
 .catalog-menu:hover {
   display: block;
- }
+}
 
 .nav-catalog-item {
   position: relative;
   outline: none;
 }
 
- .nav-catalog-item:hover+.catalog-menu {
+.nav-catalog-item:hover+.catalog-menu {
   display: block;
- }
+}
 
- .nav-catalog-item::before {
+.nav-catalog-item::before {
   content: "";
   position: absolute;
   right: -25px;
@@ -536,6 +535,7 @@ input[type="radio"].visually-hidden {
 .nav-catalog-item:hover::after {
   opacity: 0.3;
 }
+
 /* Main-Index-Slider */
 
 .top-slider {
@@ -737,8 +737,6 @@ input[type="radio"].visually-hidden {
   padding: 0;
 } 
 
-/* не понимаю как следать что бы при focuse прозрачность фона не менялся. */
-
 .product-item  {
   position: relative;
   list-style: none;
@@ -763,21 +761,12 @@ input[type="radio"].visually-hidden {
   color: var(--basic-black);
 }
 
-.product-item:hover::before  {
-  color: var(--special-yellow-dark);
-}
-
-.product-link:hover::before {
+.product-item:hover::before {
   background-color: var(--special-yellow-dark);
 }
 
-.product-link-1:focus img {
-  opacity: 0.3;
-  z-index: -1;
-}
-
 .product-link:focus {
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3)
 }
 
 .product-link-4 {
@@ -797,7 +786,7 @@ input[type="radio"].visually-hidden {
   z-index: -1;
 }
 
-.product-link-1::before {
+.product-link-1::after {
   content: "";
   position: absolute;
   top: 0;
@@ -810,7 +799,7 @@ input[type="radio"].visually-hidden {
   z-index: 0;
 }
 
-.product-link-2::before {
+.product-link-2::after {
   content: "";
   position: absolute;
   top: 0;
@@ -823,7 +812,7 @@ input[type="radio"].visually-hidden {
   z-index: 0;
 }
 
-.product-link-3::before {
+.product-link-3::after {
   content: "";
   position: absolute;
   top: 0;
@@ -836,7 +825,7 @@ input[type="radio"].visually-hidden {
   z-index: 0;
 }
 
-.product-link-4::before {
+.product-link-4::after {
   content: "";
   position: absolute;
   top: 0;
@@ -849,7 +838,7 @@ input[type="radio"].visually-hidden {
   z-index: 0;
 }
 
-.product-link-5::before {
+.product-link-5::after {
   content: "";
   position: absolute;
   top: 0;
@@ -862,7 +851,7 @@ input[type="radio"].visually-hidden {
   z-index: 0;
 }
 
-.product-link-6::before {
+.product-link-6::after {
   content: "";
   position: absolute;
   top: 0;
@@ -873,6 +862,10 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
   background-position: center;  
   z-index: 0;
+}
+
+.product-link:active::after {
+  opacity: 0.3;
 }
 
 /* Main-Index-Services-slider */
@@ -915,31 +908,26 @@ input[type="radio"].visually-hidden {
   margin-bottom: 0;
 }
 
-/* не понимаю как сделать чтобы кнопка была сразу кативной. может нужно переделать на input type="radio" со значением checked */
-
 .bottom-slider-button {
-  box-sizing: border-box;
-  display: inline-block;
+  display: block;
   position: relative;
-  z-index: 2;
-  padding: 9px 25px;
-  text-transform: uppercase;
-  font-weight: 800;
+  width: 160px;
+  z-index: 1;  
+  padding: 9px 0 9px 0;
+  border: none;
+  background-color: transparent;
+  
   font-family: "Gilroy", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
   font-size: 18px;
+  color: var(--basic-black);
   line-height: 22px;
   letter-spacing: 0.2em;
-  color: var(--basic-black);
-  outline: none;
-  border: none;
-  cursor: pointer;
   text-align: center;
   text-decoration: none;
-  background-color: transparent;
-}
-
-.bottom-slider-button:hover {
-  background-color: var(--special-yellow-dark);
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .bottom-slider-button::after {
@@ -949,26 +937,29 @@ input[type="radio"].visually-hidden {
   z-index: -1;
   border-bottom: 8px solid var(--special-yellow-dark);
   top: 16px;
-  left:0;
+  left: 0;
 }
 
-.bottom-slider-button:focus::after {
-  text-align: left;
-  width: 277px;
-  outline: none;
-  border: none;
+.bottom-slider-button:hover {
+  background-color: var(--special-yellow-dark);
+}
+
+.bottom-slider-button-active {
+  width: 280px;
+  padding-left: 19px;
   color: var(--special-yellow);
+  background-color: var(--basic-black);
+  text-align: left;
+  border: none;
+  outline: none;
+}
+
+.bottom-slider-button-active:hover {
   background-color: var(--basic-black);
 }
 
-.bottom-slider-button:focus,
-.bottom-slider-button.focus {
-  text-align: left;
-  width: 277px;
-  outline: none;
+.bottom-slider-button-active::after {
   border: none;
-  color: var(--special-yellow);
-  background-color: var(--basic-black);
 }
 
 .slide-bottom {
@@ -1546,11 +1537,21 @@ input[type="radio"].visually-hidden {
 
 .column-wrapper {
   display: flex;
-  justify-content: space-between;
-  width: 1200px;
+  justify-content: center;
   margin: 0 auto;
-  padding-right: 20px;
-  padding-left: 20px;
+}
+
+.filter-column-wrapper {
+  background-image: linear-gradient(to bottom, #DCDCDC 70px, #E5E5E5 70px);
+  flex-grow: 1;
+  width: 328px;
+}
+
+.product-column-wrapper {
+  display: flex;
+  background-image: linear-gradient(to bottom, #E5E5E5 70px,#FFFFFF 70px);
+  margin-left: auto;
+  flex-grow: 1;  
 }
 
 /* Main-Filter-column */
@@ -1562,17 +1563,7 @@ input[type="radio"].visually-hidden {
   align-items: flex-end;
   width: 328px;
   background-color: var(--basic-grey-light);
-}
-
-.filter-column::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: -1;
-  width: 100vw;
-  height: 100%;
-  background-color: var(--basic-grey-light);
+  margin-left: auto;
 }
 
 .filter-column-title { 
@@ -1592,19 +1583,9 @@ input[type="radio"].visually-hidden {
   background-color: #DCDCDC;
 }
 
-.filter-column-title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 328px;
-  width: 100vw;
-  height: 70px;
-  background-color: #DCDCDC;
-}
-
 /* Main-Filter-Column-Filter-Cost */
 
-.filter-column-wrapper {
+.filter-column-form {
   width: 270px;
   margin-top: 70px;
 }
@@ -1628,16 +1609,6 @@ input[type="radio"].visually-hidden {
   font-family: "Gilroy","Arial", sans-serif;
   font-weight: 800;
   letter-spacing: 0.1em;
-}
-
-.filters-title::before {
-  content: "";
-  position: absolute;
-  top: -14px;
-  left: 0px;
-  width: 200px;
-  height: 2px;
-  background-color: var(--basic-black);
 }
 
 .filter-cost {
@@ -1794,6 +1765,7 @@ input[type="radio"].visually-hidden {
 }
 
 /* Main-Product-List */
+
 .product-page {
   padding-top: 50px;
   padding-left: 70px;
@@ -1809,19 +1781,6 @@ input[type="radio"].visually-hidden {
   padding-top: 25px;
   padding-bottom: 25px;
   padding-left: 70px;
-}
-
-/* из-за этого псевдо элемента появляется полоса прокрутку я ее уберу в javascript  */
-
-.category-sort::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  width: 100vw;
-  height: 100%;
-  background-color: rgba(0,0,0,.08);
 }
 
 .category-title {
@@ -1973,8 +1932,6 @@ input[type="radio"].visually-hidden {
   margin-bottom: 12px;
 }
 
- /* при ховере осветляется и кнопка не понимаю как поправить  */
-
 .product-image {
   position: relative;
 }
@@ -1984,6 +1941,30 @@ input[type="radio"].visually-hidden {
 }
 
 .product-image:hover .product-buttons {
+  display: block;
+}
+
+.product-item-new {
+  position: absolute;
+  top: 29px;
+  right: 27px;
+  display: none;
+  box-sizing: border-box;
+  width: 62px;
+  height: 62px;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 62px;
+  font-family: "Gilroy","Arial", sans-serif;
+  text-align: center;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  border: 2px solid var(--basic-black);
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+.product-item-new-active {
   display: block;
 }
 
@@ -1999,6 +1980,7 @@ input[type="radio"].visually-hidden {
   font-weight: 300;
   letter-spacing: 0.1em;
   color:  rgba(0, 0, 0, 0.5);
+  cursor: pointer;
   border: none;
   background-color: transparent;
 }
@@ -2166,6 +2148,15 @@ input[type="radio"].visually-hidden {
   box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
 }
 
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
 .modal-write-us {
   height: 560px;
   width: 960px;
@@ -2222,7 +2213,7 @@ input[type="radio"].visually-hidden {
 
 /* Modal-form */
 
-.modal-form {
+.modal-letter-form {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -2254,7 +2245,7 @@ input[type="radio"].visually-hidden {
   font-family: "Gilroy","Arial", sans-serif;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.4);
-  border: 0;
+  border: 2px solid transparent;
   outline: 0;
   background-color: #F2F2F2;
 }
@@ -2272,7 +2263,7 @@ input[type="radio"].visually-hidden {
   font-family: "Gilroy","Arial", sans-serif;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.4);
-  border: 0;
+  border: 2px solid transparent;
   outline: 0;
   background-color: #F2F2F2;
 }
@@ -2316,3 +2307,22 @@ input[type="radio"].visually-hidden {
   border: none;
 }
 
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

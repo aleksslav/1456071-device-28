@@ -186,7 +186,7 @@
             <div class="slider-left">
               <ul class="services-buttons">
                 <li class="services-button-delivery">
-                  <a href="#" class="bottom-slider-button bottom-slider-button-active">Доставка</a>
+                  <a href="#" class="bottom-slider-button bottom-slider-button-active"">Доставка</a>
                 </li>
                 <li class="services-button-warranty">
                   <a href="#" class="bottom-slider-button">Гарантия</a>
@@ -265,7 +265,7 @@
                   <img src="img/map.png" width="560" height="222" alt="Офис компании по адресу г. Москва, ул. Строителей, 15">
                 </a>
               </figure>
-              <a href="#" class="button">Напишите нам</a>
+              <a href="#" class="button letter-link">Напишите нам</a>
             </div>
           </div>
         </section>
@@ -316,16 +316,16 @@
         </div>
       </div>
     </footer>
-    <section class="modal modal-write-us modal-write-us">
+    <section class="modal modal-write-us">
       <h2 class="visually-hidden">Напишите Нам</h2>      
-      <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
+      <form class="modal-letter-form" action="https://echo.htmlacademy.ru" method="post">
         <div class="modal-input-wrap  modal-input-name">
           <label for="user-name">Ваше имя:</label>
-          <input id="user-name" type="text" name="name" placeholder="Имя Фамилия">
+          <input class="modal-user-name" id="user-name" type="text" name="name" placeholder="Имя Фамилия">
         </div>
         <div class="modal-input-wrap  modal-input-email">
           <label for="user-email">Ваш e-mail:</label>
-          <input id="user-email" type="email" name="email" placeholder="email@example.com">
+          <input class="modal-user-email" id="user-email" type="email" name="email" placeholder="email@example.com">
         </div>
         <div class="modal-input-wrap  modal-input-letter">
           <label for="user-letter">Текст письма:</label>
@@ -344,6 +344,8 @@
         <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
       </div>
     </section>
+
+    <script src="js/script.js"></script>
 
   </body>
 </html>
