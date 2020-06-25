@@ -405,7 +405,7 @@ input[type="radio"].visually-hidden {
   content: "";
   position: absolute;
   top: 15px;
-  left: 27px;
+  left: 29px;
    
   width: 14px;
   height: 14px;
@@ -476,20 +476,13 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: 33px;
   left: -60px;
-  z-index: 2;
-  display: none;
+  z-index: -1;
+  opacity: 0;
   width: 1160px;
   padding-top: 20px;
   padding-bottom: 42px;
   padding-left: 60px;
   background-color: #f7e296;
-
-  font-family: "Open Sans","Arial", sans-serif;
-  font-weight: 300;
-  font-size: 15px;
-  line-height: 20px;
-  text-transform: none; 
-  letter-spacing: normal;
 }
 
 .catalog-submenu {
@@ -536,13 +529,11 @@ input[type="radio"].visually-hidden {
   margin-bottom: 0px;
 }
 
-.catalog-submenu li {
-  padding: 0;
-  padding-bottom: 0;
-}
-
+.catalog-menu:focus-within,
+.nav-catalog-item:hover + .catalog-menu,
 .catalog-menu:hover {
-  display: block;
+    z-index: 2;
+    opacity: 1;
 }
 
 .nav-catalog-item {
@@ -551,15 +542,11 @@ input[type="radio"].visually-hidden {
   letter-spacing: 0.1em;
 }
 
-.nav-catalog-item:hover+.catalog-menu {
-  display: block;
-}
-
 .nav-catalog-item::before {
   content: "";
   position: absolute;
-  right: -25px;
-  bottom: 3px;
+  right: -27px;
+  bottom: 2px;
   width: 2px;
   height: 16px;
   background-color: #AD9E69;
@@ -568,8 +555,8 @@ input[type="radio"].visually-hidden {
 .nav-catalog-item::after {
   content: "";
   position: absolute;
-  right: -32px;
-  bottom: 10px;
+  right: -33px;
+  bottom: 9px;
   width: 16px;
   height: 2px;
   background-color:  #AD9E69;
@@ -587,11 +574,11 @@ input[type="radio"].visually-hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: -128px;
+  margin-top: -129px;
 }
 
 .slide-1 {
-  margin-bottom: 114px;
+  margin-bottom: 100px;
 }
 
 .slide-2 {
@@ -599,7 +586,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slide-3 {
-  margin-bottom: 115px;
+  margin-bottom: 100px;
 }
 
 .slider-list {
@@ -675,16 +662,12 @@ input[type="radio"].visually-hidden {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-right: 61px;
-}
-
-.characteristics-item:last-child {
-  margin-right: 0;
 }
 
 .characteristics-list dt {
   margin: 0;
   padding: 0;
+  width: 100%;
   margin-bottom: 15px;
   font-size: 36px;
   line-height: 42px;
@@ -707,6 +690,14 @@ input[type="radio"].visually-hidden {
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;
+}
+
+.characteristics-item-1 {
+  min-width: 159px;
+}
+
+.characteristics-item-2 {
+  min-width: 137px;
 }
 
 .slider-list {
@@ -763,8 +754,8 @@ input[type="radio"].visually-hidden {
 .slogan-3::after {
   content: "03";
   position: absolute;
-  top: -98px;
-  right: -20px;
+  top: -90px;
+  right: -16px;
   font-family: "Gilroy","Arial", sans-serif; 
   font-size: 179px; 
   line-height: 179px;
@@ -775,7 +766,7 @@ input[type="radio"].visually-hidden {
 .slide-description {
   margin: 0;
   padding: 0;
-  margin-top: 26px;
+  margin-top: 27px;
   margin-bottom: 50px;
   font-size: 15px;
   line-height: 20px;
@@ -797,8 +788,8 @@ input[type="radio"].visually-hidden {
   position: absolute;
   z-index: 1;
   min-width: 72px;
-  right: 89px;
-  top: 338px;
+  right: 88px;
+  top: 340px;
 }
 
 .slider-control-button {
@@ -1245,7 +1236,7 @@ input[type="radio"].visually-hidden {
 /* About-company */
 
 .about-company {
-  margin-bottom: 76px;
+  margin-bottom: 77px;
 }
 
 .about-company-wrapper {
@@ -1299,13 +1290,13 @@ input[type="radio"].visually-hidden {
 }
 
 .about-us p:nth-last-of-type(1) {
-  margin-bottom: 62px;
+  margin-bottom: 63px;
 }
 
 .transport-company {
   margin: 0;
   padding: 0;
-  margin-bottom: 74px;
+  margin-bottom: 71px;
 }
 
 .transport-company-list:last-child {
@@ -1315,7 +1306,7 @@ input[type="radio"].visually-hidden {
 .transport-company-list {
   margin: 0;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   margin-left: 31px;
   position: relative;
 
@@ -1333,7 +1324,7 @@ input[type="radio"].visually-hidden {
 .transport-company-list::before {
   content: "";
   position: absolute;
-  top: 7px;
+  top: 6px;
   left: -32px;
   width: 8px;
   height: 8px;
@@ -1372,8 +1363,8 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-wrapper {
-  padding-top: 48px;
-  padding-bottom: 60px;
+  padding-top: 46px;
+  padding-bottom: 63px;
 }
 
 .footer-top {
@@ -1390,7 +1381,7 @@ input[type="radio"].visually-hidden {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin-bottom: 38px;
+  margin-bottom: 39px;
 }
 
 .footer-nav {
@@ -1538,7 +1529,7 @@ input[type="radio"].visually-hidden {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  margin-bottom: 66px;
+  margin-bottom: 67px;
 }
 
 .footer-address {
@@ -1570,7 +1561,7 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-service-item {
-  padding-right: 34px;
+  padding-right: 32px;
 }
 
 .footer-service-link {
@@ -1630,7 +1621,7 @@ input[type="radio"].visually-hidden {
 .footer-bottom::before {
   content: "";
   position: absolute;
-  top: 14px;
+  top: 12px;
   left: 0;
   width: 80px;
   height: 7px;
@@ -1837,7 +1828,7 @@ input[type="radio"].visually-hidden {
   padding: 0;
   padding-top: 25px;
   padding-bottom: 25px;
-  padding-left: 60px;
+  padding-left: 59px;
   font-size: 16px;
   line-height: 20px;
   font-family: "Gilroy","Arial", sans-serif;
@@ -1850,8 +1841,10 @@ input[type="radio"].visually-hidden {
 /* Main-Filter-Column-Filter-Cost */
 
 .filter-column-form {
-  width: 270px;
-  margin-top: 70px;
+  padding-top: 71px ;
+  padding-right: 68px ;
+  padding-bottom: 25px;
+  padding-left: 60px;
 }
 
 .filter-cost,
@@ -1862,22 +1855,26 @@ input[type="radio"].visually-hidden {
   border: 0 none;
 }
 
+.fieldset-item {
+  margin: 0;
+  margin-bottom: 38px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-top: 2px solid var(--basic-black);
+}
+
 .filters-title { 
-  position: relative;
   margin: 0;
   padding: 0;
-  margin-top: 17px;
+  margin-top: 14px;
   margin-bottom: 31px;
-  margin-left: 2px;
   font-size: 14px;
   line-height: 17px;
   font-family: "Gilroy","Arial", sans-serif;
   font-weight: 800;
   letter-spacing: 0.1em;
-}
-
-.filter-cost {
-  width: 200px;
 }
 
 .range-controls {
@@ -1921,9 +1918,7 @@ input[type="radio"].visually-hidden {
 }
 
 .price-controls {
-  margin-top: 6px;
-  margin-bottom: 38px;
-  margin-left: 3px;
+  margin-top: 7px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1951,7 +1946,7 @@ input[type="radio"].visually-hidden {
 }
 
 .max-price {
-  padding-right: 25px;
+  padding-right: 29px;
 }
 
 /* Main-Filter-Column-Filter-Color */
@@ -1959,12 +1954,15 @@ input[type="radio"].visually-hidden {
 .color-names {
   margin: 0;
   padding: 0;
-  margin-bottom: 40px;
+}
+
+.color-names li:last-child {
+  margin-bottom: 0;
 }
 
 .filter-option {
   list-style: none;
-  margin-left: 43px;
+  margin-left: 40px;
   margin-bottom: 20px;
 }
 
@@ -2034,7 +2032,6 @@ input[type="radio"].visually-hidden {
     outline: none;  
 }
 
-
 .filter-input-checkbox:not(:disabled) + .filter-label:hover::after,
 .filter-input-radio:not(:disabled) + .radio-label:hover::after {
   opacity: 0.6;
@@ -2046,7 +2043,6 @@ input[type="radio"].visually-hidden {
 .bluetooth-position {
   margin: 0;
   padding: 0;
-  margin-bottom: 44px;
 }
 
 .filter-input-radio + label::before {
@@ -2071,11 +2067,20 @@ input[type="radio"].visually-hidden {
   border-radius: 50%;
 }
 
+.filter-bluetooth {
+  margin-bottom: 22px;
+}
+
+.filter-radio {
+  margin-left: 39px;
+  margin-bottom: 23px;
+}
+
 /* Main-Product-List */
 
 .product-page {
   padding-top: 71px;
-  padding-left: 71px;
+  padding-left: 72px;
   padding-bottom: 78px;
 }
 
@@ -2095,7 +2100,7 @@ input[type="radio"].visually-hidden {
       flex-wrap: wrap;
   padding-top: 25px;
   padding-bottom: 25px;
-  padding-left: 72px;
+  padding-left: 71px;
 }
 
 .category-title {
@@ -2114,7 +2119,7 @@ input[type="radio"].visually-hidden {
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-left: 73px;
+  padding-left: 72px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2133,7 +2138,7 @@ input[type="radio"].visually-hidden {
 }
 
 .sort-link {
-  padding-right: 31px;
+  padding-right: 30px;
   font-size: 14px;
   line-height: 19px;
   font-family: "Open Sans","Arial", sans-serif;
@@ -2170,8 +2175,8 @@ input[type="radio"].visually-hidden {
   content: "";
   position: absolute;
   display: block;
-  top: 22px;
-  left: 12px;
+  top: 7px;
+  left: 11px;
   width: 18px;
   height: 18px;
   background-image: url("../img/arrow-up.svg");
@@ -2187,7 +2192,7 @@ input[type="radio"].visually-hidden {
   content: "";
   position: absolute;
   display: block;
-  top: 18px;
+  top: 2px;
   left: 42px;
   width: 18px;
   height: 18px;
