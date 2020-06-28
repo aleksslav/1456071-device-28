@@ -17,6 +17,8 @@
   --basic-white-opaciti-03: rgba(255, 255, 255, 0.3);
   --basic-white-opaciti-07: rgba(255, 255, 255, 0.7);
   --basic-black-opacity-01: rgba(0, 0, 0, 0.1);
+  --basic-black-opacity-015: rgba(0, 0, 0, 0.15);
+  --basic-black-opacity-018: rgba(0, 0, 0, 0.18);
   --basic-black-opacity-02: rgba(0, 0, 0, 0.2);
   --basic-black-opacity-03: rgba(0, 0, 0, 0.3);
   --basic-black-opacity-04: rgba(0, 0, 0, 0.4);
@@ -1919,8 +1921,8 @@ input[type="radio"].visually-hidden {
   border: 8px solid var(--basic-white);
   background-color: var(--special-grey-toggle);
   border-radius: 50%;
-  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.18);
-          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.18);
+  -webkit-box-shadow: 0px 2px 2px var(--basic-black-opacity-018);
+          box-shadow: 0px 2px 2px var(--basic-black-opacity-018);
   cursor: pointer;
 }
 
@@ -2536,8 +2538,8 @@ input[type="radio"].visually-hidden {
   background-color: var(--basic-white); 
   background-position: 0 0;
   background-repeat: repeat;
-  -webkit-box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 10px 16px var(--basic-black-opacity-015);
+          box-shadow: 0px 10px 16px var(--basic-black-opacity-015);
 }
 
 .modal-show {
